@@ -74,7 +74,7 @@ passport.deserializeUser(User.deserializeUser());
 
 //routes
 app.get("/",function(req,res){
-    res.redirect("/blog")
+    res.render("landing");
 })
 
 

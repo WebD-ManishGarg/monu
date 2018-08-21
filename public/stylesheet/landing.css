@@ -1,0 +1,12 @@
+nav img{
+    padding-top: 10px;
+}
+ .container .row {
+     margin-top: 100px;
+   
+ }
+ body{
+     width: 100%;
+    background: url("/images/landing.jpg");
+    background: cover;
+ }
