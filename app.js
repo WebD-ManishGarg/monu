@@ -72,14 +72,13 @@ passport.deserializeUser(User.deserializeUser());
 
 
 
-
 //routes
 app.get("/",function(req,res){
     res.redirect("/blog")
 })
 
 
-//landing page
+//index page
 app.get("/blog",function(req,res){
     Blog.find({},function(err,blog){
         res.render("index",{blog});

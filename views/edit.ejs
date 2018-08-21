@@ -24,7 +24,7 @@
                 <div>
     
     
-                        <nav >
+                        <nav class="teal" >
                           <div class="container">
                          <div class="nav-wrapper ">
                           <img  src="/images/logo.png" class="left">
@@ -47,11 +47,30 @@
                          </ul>
                             
                   </div>
-                  <form action="/blog/<%=blog._id%>?_method=put" method="POST">
-    <input type="text" name="blog[title]"  value="<%=blog.title%>">
-    <input type="text" name="blog[image]" value="<%=blog.image%>">
-    <input type="text" name="blog[text]" value="<%=blog.text%>">
-    <input type="submit">
+    
+
+    <div class="container">
+      <div class="row">
+          <h1 style="text-align: center">Edit <%= blog.title %></h1>
+          <div style="width: 30%; margin: 25px auto;">
+              <form action="/blog/<%=blog._id%>?_method=put" method="POST">
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="blog[title]"  value="<%=blog.title%>">
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="blog[image]" value="<%=blog.image%> %>">
+                  </div>
+                  <div class="form-group">
+                      <input class="form-control" type="text" name="blog[text]" value="<%=blog.text%>">
+                  </div>
+                  <div class="form-group">
+                      <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                  </div>
+              </form>
+              <a href="/blog">Go Back</a>
+          </div>
+      </div>
+  </div>
 </form>
           
 </body>

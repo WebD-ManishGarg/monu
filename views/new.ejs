@@ -47,12 +47,28 @@
                          </ul>
                             
                   </div>
-                  <form action="/blog" method="POST">
-    <input type="text" name="title"" placeholder="title of blog">
-    <input type="text" name="image" placeholder="image of blog">
-    <input type="text" name="text" placeholder="text of blog">
-    <input type="submit">
-</form>
           
+<div class="container">
+  <div class="row">
+      <h1 style="text-align: center">Create a New Blog</h1>
+      <div style="width: 30%; margin: 25px auto;">
+          <form action="/blog" method="POST">
+              <div class="form-group">
+                  <input class="form-control" type="text" name="title" placeholder="title of blog">
+              </div>
+              <div class="form-group">
+                  <input class="form-control"  name="image" placeholder="image of blog">
+              </div>
+              <div class="form-group">
+                  <input class="form-control" type="text" name="text" placeholder="text of blog">
+              </div>
+              <div class="form-group">
+                  <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+              </div>
+          </form>
+          <a href="/blog">Go Back</a>
+      </div>
+  </div>
+</div>
 </body>
 </html>

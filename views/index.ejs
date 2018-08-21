@@ -46,19 +46,35 @@
                      </ul>
                         
               </div>
+     
         <div class="container">
-
-                <h1>index page !!!!!!!!!!!!!!!!!!!</h1>
-                <a href="/blog/new">add campground</a>
-                <%blog.forEach(function(blog){%>
-                    <h2><%= blog.title %></h2>
-                    <img src="<%= blog.image %>" alt="image 1" >
-                    <p><%= blog.text %></p>
-                    <a href="/blog/<%=blog._id%>">read more</a>
+          <header class="jumbotron">
+              <div class="container">
+                  <h1>Welcome To Bloggers</h1>
+                  
+                  <p>
+                     <a class="btn btn-primary btn-large center" href="/blog/new">Add New Blog</a>
+                  </p>
+              </div>
+          </header>
           
-               <% })%>
-                
-        </div>
+          <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+             <% blog.forEach(function(blog){ %>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="thumbnail">
+                        <img src="<%= blog.image %>">
+                        <div class="caption">
+                            <h4><%= blog.title %></h4>
+                        </div>
+                        <p>
+                            <a href="/blog/<%=blog._id%>" class="btn btn-primary">More Info</a>
+                        </p>
+                     </div>
+                 </div>
+             <% }); %>
+         </div>
+     </div>
+     
           
     </body>
 </html>
